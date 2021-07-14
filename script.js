@@ -7,7 +7,7 @@ let fileExists = function(path) {
     return new Promise((resolve, reject) => {
             fs.access(path, fs.R_OK, error => {
                 resolve(!error || error.code !== 'ENOENT');
-            })
+            })//scope ends
     });
 };
 
